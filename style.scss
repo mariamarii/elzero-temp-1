@@ -1,0 +1,134 @@
+$wh-color: #FFF;
+$gray-color: #f6f6f6;
+$bl-color: #10cab7;
+$dark-color: #2c4755;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    
+   
+}
+
+
+
+.services {
+    
+    padding: 50px;
+    text-align: center;
+    .services-container {
+        display: grid;
+        max-width: 1600px;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+       gap:20px;
+        align-items: center;
+        margin-left: 170px; 
+        margin-right: 0;
+       
+
+        grid-template-rows: auto 1fr;
+        .services-header{
+            
+          
+            grid-column: 1/-1;
+            text-align: center;
+            margin: 0; 
+            padding: 0;
+
+            h1 {
+                color: rgb(234, 233, 233);
+                font-size: 120px;
+                font-weight: 200px;
+                line-height: 1;
+                letter-spacing: -6px;
+                margin: 0; // Ensure no default margin
+            }
+
+            p{
+                font-size: 20px;
+                margin: -30px 0 40px;
+                color: gray;
+            }
+
+        }
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        text-align: left;
+       align-items: center;
+       justify-content: flex-end;
+
+        
+        .service {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            h3{
+                font-size: 23px;
+            }
+            p{
+                
+                font-size: 17px;
+                font-weight: 220;
+                line-height: 1.5;
+            }
+            .icon {
+                font-size: 24px;
+                color: $bl-color;
+            }
+
+        }
+
+    }
+    .services-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin-left: 180px;
+        width: 400px;
+        .image-container {
+            position: relative;
+            width: 270px;
+            height: 400px;
+        img{
+            
+                width: 100%;
+                height: auto;
+                display: block;
+               
+            
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            width: 40%;
+            height: 120%;
+            background-color: #163d53;
+            transform: translate(80%,-15%);
+            z-index: -1;
+
+        }
+        }
+    }
+    
+i{
+    color: $bl-color;
+    font-size: 40px;
+    margin: 20px;
+  
+   
+}
+    
+}
+
+
+
+
+
+
+
+
