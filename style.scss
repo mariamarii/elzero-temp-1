@@ -1,0 +1,90 @@
+$line_Color: #2c4755;
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+#section1{
+.background{
+    background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_One/images/landing.jpg");
+    background-size: cover;
+    height: calc(100vh - 64px);
+    margin-top:64px;
+    position: relative;
+    .text{
+        text-align: center;
+        vertical-align: middle;
+        font-family: "Work Sans", sans-serif;
+    h1{
+        
+        margin: auto;
+        color: rgb(34, 206, 177);
+        position: absolute;
+        bottom: 55%;
+        left: 36%;
+        font-weight: bold;
+        font-size: 60px;
+        
+     }
+     p{
+        position: absolute;
+        font-size: 20px;
+        color: black;
+        left: 38%;
+        bottom: 40%;
+       
+     }
+    }
+    
+}
+.container{
+.menu{
+    position: fixed;
+    top:20px;
+    margin-left:90%;
+    width:35px;
+    height:2.2px;
+    border-radius: 20%;
+    background-color:$line_Color;
+    cursor: pointer;
+    &::before {
+        content: "";  
+        position: absolute;
+        width: 60%;
+        height: 100%;
+        background-color: $line_Color; 
+        top: 7px;
+        right: 0;
+        transition: width 0.5s ease-in-out;
+    }
+    &:hover::before{
+        width: 100%;  
+    }
+    
+    &::after{
+        content: "";  
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $line_Color; 
+        top: 14px;
+        right: 0;
+    }
+    &::List-menu{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+ 
+   
+}
+.logo{
+position: absolute;
+margin-left: 10%;
+width: 60px;
+top:-45px;
+}
+}
+
+}
+
