@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+=======
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap");
+>>>>>>> Stashed changes
 body {
   font-family: "Work Sans", sans-serif;
   margin: 0;
@@ -89,12 +93,204 @@ body {
   transform: translate(80%, -15%);
   z-index: -1;
 }
+<<<<<<< Updated upstream
 .services i {
+=======
+.About .About-container .About-image .image-container::after {
+  position: absolute;
+  content: "";
+  border-left: 70px solid #10cab7;
+  border-bottom: 70px solid #10cab7;
+  width: 40%;
+  height: 90%;
+  top: -13%;
+  right: -46%;
+  z-index: -1;
+}
+.About .About-container .element-1 {
+  grid-area: first-paragraph;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+  line-height: 1.7;
+  word-spacing: 3px;
+}
+.About .About-container .element-1::after {
+  position: absolute;
+  content: "";
+  width: 250px;
+  background-color: #10cab7;
+  height: 2px;
+  bottom: -20%;
+  left: 0%;
+}
+.About .About-container .element-2 {
+  grid-area: second-paragraph;
+  text-align: left;
+  font-size: 18px;
+  word-spacing: 3px;
+  color: gray;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+@media (max-width: 1010px) {
+  .About .About-container {
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "About-header" "img" "first-paragraph" "second-paragraph";
+    text-align: center;
+  }
+  .About .About-container .About-image {
+    margin: 0 auto;
+  }
+  .About .About-container .About-image .image-container::before, .About .About-container .About-image .image-container::after {
+    content: none;
+  }
+  .About .About-container .element-1, .About .About-container .element-2 {
+    text-align: center;
+    word-spacing: normal;
+  }
+}
+@media (max-width: 600px) {
+  .About .About-container {
+    width: 95%;
+    padding: 20px;
+  }
+  .About .About-container .About-header h1 {
+    font-size: 60px;
+    letter-spacing: -2px;
+  }
+  .About .About-container .About-header p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .About .About-container .About-image .image-container {
+    max-width: 200px;
+  }
+  .About .About-container .About-image .image-container .image-container::before, .About .About-container .About-image .image-container .image-container::after {
+    content: none;
+  }
+  .About .About-container .element-1, .About .About-container .element-2 {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+.header {
+  background: #FFF;
+  padding: 10px 210px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  max-width: 70px;
+}
+.header details {
+  position: relative;
+  width: auto;
+}
+.header details summary {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  list-style: none;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  z-index: 2;
+}
+.header details summary .line {
+  width: 30px;
+  height: 2px;
+  background: black;
+}
+.header details summary .line:nth-child(2) {
+  width: 15px;
+  height: 1.5px;
+  margin-left: auto;
+  transition: width 0.5s ease-in-out;
+}
+.header details .nav {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  border-radius: 5px;
+  width: 250px;
+  z-index: 2;
+}
+.header details .nav li {
+  height: 30px;
+  padding: 10px;
+  background: #f6f6f6;
+  border-bottom: 1px solid #ddd;
+}
+.header details .nav li:last-child {
+  border-bottom: none;
+}
+.header details .nav li a {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: 0.7s;
+}
+.header details .nav li a:hover {
+  padding-left: 20px;
+}
+.header details[open] .nav {
+  display: block;
+}
+.header details[open] .line:nth-child(2) {
+  width: 30px;
+}
+.header details[open] .line::after {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 10px;
+  bottom: -8px;
+}
+
+.home {
+  background-image: url("./landing.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 86.7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+.home .home-content {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  text-align: center;
+}
+.home h1 {
+  font-size: 60px;
+  font-family: "Work Sans", sans-serif;
+>>>>>>> Stashed changes
   color: #10cab7;
   font-size: 40px;
   margin: 20px;
 }
 
+<<<<<<< Updated upstream
 @media (max-width: 1465px) {
   .services .services-image .image-container {
     width: 0px;
@@ -111,4 +307,50 @@ body {
     grid-template-columns: 1fr;
     text-align: center;
   }
+=======
+.portfolio {
+  padding: 60px 0;
+  background-color: #f6f6f6;
+}
+.portfolio .heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.portfolio .heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+.portfolio .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 80px;
+}
+.portfolio .content .card {
+  background-color: white;
+  align-items: center;
+}
+.portfolio .content .card img {
+  max-width: 100%;
+}
+.portfolio .content .card .description {
+  padding: 20px;
+}
+.portfolio .content .card .description h3 {
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.portfolio .content .card .description p {
+  color: #777;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 0;
+>>>>>>> Stashed changes
 }/*# sourceMappingURL=style.css.map */
