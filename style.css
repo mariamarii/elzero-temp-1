@@ -1,11 +1,39 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap");
-
 body {
   font-family: "Work Sans", sans-serif;
   margin: 0;
   padding: 0;
+}
 
+#section2 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 80px;
+}
+
+.container-1 {
+  width: 90%;
+  margin-top: 60px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.container-1 .icon {
+  text-align: center;
+  margin: auto;
+}
+.container-1 .icon h1 {
+  font-weight: 800px;
+  padding: 20px;
+}
+.container-1 .icon p {
+  font-size: 15px;
+  padding: 20px;
+  color: rgba(122, 120, 120, 0.815);
+}
+.container-1 .icon i {
+  color: #10cab7;
 }
 
 .About {
@@ -146,8 +174,6 @@ body {
     font-size: 16px;
     text-align: justify;
   }
-
-  background: #f6f6f6;
 }
 
 .header {
@@ -333,5 +359,4 @@ body {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 0;
-
 }/*# sourceMappingURL=style.css.map */

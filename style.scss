@@ -3,7 +3,7 @@ $wh-color: #FFF;
 $gray-color: #f6f6f6;
 $bl-color: #10cab7;
 $dark-color: #2c4755;
-
+$features_color:#10cab7;
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap');
 
@@ -14,6 +14,43 @@ body {
     padding: 0;
 
 }
+
+#section2{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 80px;;
+   
+}
+.container-1{
+    width: 90%;
+    margin-top: 60px;
+    background-color: white;
+     display: grid;   
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-gap: 20px;
+   
+    .icon{
+       
+       text-align: center;
+       margin: auto;
+      
+       
+        h1{
+            font-weight: 800px;
+            padding: 20px;
+        }
+        p{
+            font-size: 15px;
+            padding: 20px;
+            color: rgba(122, 120, 120, 0.815);
+        }
+        i{
+           
+            color:$features_color;;
+        }
+    }
+}
+
 
 .About {
     padding: 50px;
@@ -193,9 +230,9 @@ body {
     }
 }
 
-    background: $gray-color;
+   // background: $gray-color;
    
-}
+
 
 .header {
 
@@ -428,6 +465,5 @@ body {
         }
     }
 }
-
 
 
