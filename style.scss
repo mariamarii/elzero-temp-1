@@ -1,5 +1,194 @@
 
-// Portfolio Section
+$wh-color: #FFF;
+$gray-color: #f6f6f6;
+$bl-color: #10cab7;
+$dark-color: #2c4755;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: $gray-color;
+   
+}
+
+.header {
+
+    background: $wh-color;
+    padding: 10px 210px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        max-width: 70px;
+    }
+
+    details {
+        position: relative;
+        width: auto;
+       
+
+        summary {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            list-style: none;
+            border: none;
+            background: transparent;
+            padding: 10px;
+           
+            .line {
+                
+                width: 30px;
+                height: 2px;
+                background: black;
+                
+            }
+            .line:nth-child(2){
+                width: 15px; 
+                height: 1.5px;
+                margin-left: auto;
+                transition: width 0.5s ease-in-out;
+            }
+            z-index: 2;
+            
+        }
+
+        .nav {
+            //background-color: #ddd;
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+         
+           
+            border-radius: 5px;
+            width: 250px;
+            z-index: 2;
+            
+
+            li {
+                height: 30px;
+                padding: 10px;
+                background: #f6f6f6;
+
+                border-bottom: 1px solid #ddd;
+                &:last-child{
+                    border-bottom: none;
+                }
+                
+                
+                a {
+                    margin: 10px;
+                    //padding: auto;
+                    text-decoration: none;
+                    color:black;
+                    
+                    display: block;
+                    transition: 0.7s;
+
+                    &:hover {
+                      
+                        padding-left: 20px;
+                        
+                    }
+
+
+                }
+            }
+                
+               
+        }
+
+        &[open] .nav {
+            display: block;
+            
+        }
+       
+    }
+    details[open] {
+        .line:nth-child(2) {
+            width: 30px; 
+        }
+        .line::after {
+            content: "";
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent #f6f6f6 transparent;
+            position: absolute;
+            right: 10px;
+            bottom:-8px
+          }
+    }
+}
+
+.home{
+    background-image: url("./landing.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 86.7vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    padding: 20px;
+    position: relative;
+    .home-content{
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        text-align: center; 
+    }
+    h1{ 
+        
+        font-size: 60px;
+        font-family: "Work Sans", sans-serif;
+        color: #10cab7;
+   
+        margin: 0%;
+    }
+    p{
+        
+        color: black;
+        font-size: 20px;
+        line-height: 40px;
+        
+    }
+    @media (max-width: 700px) {
+        height: 80vh; 
+     
+        h1 {
+            font-size: 40px; 
+            
+        }
+        p{
+           font-size:15px;
+        }
+    }
+    @media (max-width: 427px) {
+        width:  54vh; 
+        height: 80vh;
+        h1 {
+            font-size: 40px; 
+            
+        }
+        p{
+           font-size:10px;
+        }
+    
+    }
+
+}
+
 .portfolio {
     padding: 60px 0;
     background-color: $secondary-color;
@@ -54,3 +243,5 @@
         }
     }
 }
+
+
