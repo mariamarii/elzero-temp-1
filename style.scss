@@ -86,7 +86,7 @@ body {
                 
                 a {
                     margin: 10px;
-                    //padding: auto;
+                   
                     text-decoration: none;
                     color:black;
                     
@@ -191,7 +191,7 @@ body {
 
 .portfolio {
     padding: 60px 0;
-    background-color: $secondary-color;
+    background-color: #f6f6f6;
 
     .heading {
         color: #ebeced;
@@ -222,7 +222,7 @@ body {
             img {
                 max-width: 100%;
             }
-
+        
             .description {
                 padding: 20px;
 
@@ -233,8 +233,8 @@ body {
                 }
 
                 p {
-                    font-weight: lighter;
-                    color: $text-color;
+                    //font-weight: lighter;
+                    color: #777;
                     font-size: 18px;
                     line-height: 1.5;
                     margin-bottom: 0;

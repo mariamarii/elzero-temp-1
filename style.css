@@ -143,4 +143,50 @@ body {
   .home p {
     font-size: 10px;
   }
+}
+
+.portfolio {
+  padding: 60px 0;
+  background-color: #f6f6f6;
+}
+.portfolio .heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.portfolio .heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+.portfolio .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 80px;
+}
+.portfolio .content .card {
+  background-color: white;
+  align-items: center;
+}
+.portfolio .content .card img {
+  max-width: 100%;
+}
+.portfolio .content .card .description {
+  padding: 20px;
+}
+.portfolio .content .card .description h3 {
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.portfolio .content .card .description p {
+  color: #777;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
