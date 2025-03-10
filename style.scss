@@ -3,11 +3,196 @@ $wh-color: #FFF;
 $gray-color: #f6f6f6;
 $bl-color: #10cab7;
 $dark-color: #2c4755;
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap');
+
+
 body {
     font-family: "Work Sans", sans-serif;
     margin: 0;
     padding: 0;
+
+}
+
+.About {
+    padding: 50px;
+    text-align: center;
+
+    .About-container {
+        display: grid;
+        grid-template-areas: 
+            "About-header About-header"
+            "img first-paragraph"
+            "img second-paragraph";
+        grid-template-columns: 1fr 3fr; 
+        gap: 20px;
+        align-items: center;
+        margin: 0 auto;
+        width: 70%;
+
+        .About-header {
+            grid-area: About-header; 
+            text-align: center;
+            margin-bottom: 20px;
+
+            h1 {
+                color: rgb(234, 233, 233);
+                font-size: 120px;
+                font-weight: 200px;
+                line-height: 1;
+                letter-spacing: -6px;
+                margin: 0; 
+            }
+
+            p{
+                font-size: 20px;
+                margin: -30px 0 40px;
+                color: gray;
+            }
+        }
+
+        .About-image {
+            grid-area: img;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 180px; 
+
+            .image-container {
+                width: 250px; 
+                max-width: 400px;
+                height: auto;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 140%;
+                    width: 40%;
+                    background-color: $gray-color;
+                    left: -20%;
+                    top: -13%;
+                    z-index: -1;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    border-left: 70px solid $bl-color;
+                    border-bottom: 70px solid $bl-color;
+                    width: 40%;
+                    height: 90%;
+                    top: -13%;
+                    right: -46%;
+                    z-index: -1;
+                }
+            }
+        }
+
+        .element-1 {
+            grid-area: first-paragraph;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 700;
+            position: relative;
+            line-height: 1.7;
+            word-spacing: 3px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 250px; 
+                background-color: #10cab7;
+                height: 2px;
+                bottom: -20%;
+                left:0%;
+            }
+        }
+
+        .element-2 {
+            grid-area: second-paragraph;
+            text-align: left;
+            font-size: 18px;
+            word-spacing: 3px;
+            color: gray;
+            line-height: 1.7;
+            margin-top: 20px;
+        }
+    }
+
+    // **Responsive Styles**
+    @media (max-width: 1010px) {
+        .About-container {
+            width: 90%;
+            grid-template-columns: 1fr; 
+            grid-template-areas:
+                "About-header"
+                "img"
+                "first-paragraph"
+                "second-paragraph";
+            text-align: center;
+            
+            .About-image {
+                margin: 0 auto;
+                .image-container {
+                    &::before,
+                    &::after {
+                        content: none;
+                    }
+                }
+            }
+
+            .element-1, .element-2 {
+                text-align: center;
+                word-spacing: normal;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .About-container {
+            width: 95%;
+            padding: 20px;
+            
+            .About-header {
+                h1 {
+                    font-size: 60px;
+                    letter-spacing: -2px;
+                }
+
+                p {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .About-image {
+                .image-container {
+                    max-width: 200px;
+                    .image-container {
+                        &::before,
+                        &::after {
+                            content: none;
+                        }
+                    }
+                }
+            }
+
+            .element-1, .element-2 {
+                font-size: 16px;
+                text-align: justify;
+            }
+        }
+    }
+}
+
     background: $gray-color;
    
 }
@@ -243,5 +428,6 @@ body {
         }
     }
 }
+
 
 
