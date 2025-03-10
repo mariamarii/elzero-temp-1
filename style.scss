@@ -1,4 +1,110 @@
 
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navbar */
+.nav {
+    padding: 20px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .items {
+        position: relative;
+
+        .icon {
+            width: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            span {
+                background-color: black;
+                margin-bottom: 8px;
+            }
+
+            span:first-child {
+                height: 1.8px;
+                width: 100%;
+            }
+
+            span:nth-child(2) {
+                height: 1.8px;
+                transition: 0.5s;
+                width: 60%;
+            }
+
+            span:last-child {
+                height: 1.8px;
+                width: 100%;
+            }
+        }
+
+        &:hover .icon span:nth-child(2) {
+            width: 100%;
+        }
+
+        ul {
+            position: absolute;
+            list-style: none;
+            right: 0;
+            padding: 0;
+            margin: 0;
+            min-width: 200px;
+            background-color: #f6f6f6;
+            top: calc(100% + 10px);
+            display: none;
+            z-index: 1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                border-style: solid;
+                border-width: 10px;
+                border-color: transparent transparent #f6f6f6 transparent;
+                top: -18px;
+                right: 5px;
+            }
+
+            &::after {
+                content: '';
+                display: list-item;
+            }
+
+            li {
+                a {
+                    display: block;
+                    padding: 10px;
+                    text-decoration: solid;
+                    transition: 0.5s;
+                    color: rgb(75, 72, 72);
+                    border-bottom: 1px solid #DDD;
+
+                    &:hover {
+                        padding-left: 25px;
+                    }
+                }
+            }
+        }
+
+        &:hover ul {
+            display: block;
+        }
+    }
+}
+
+
 $wh-color: #FFF;
 $gray-color: #f6f6f6;
 $bl-color: #10cab7;
