@@ -1,94 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Navbar */
-.nav {
-  padding: 20px;
-}
-.nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav .logo {
-  width: 80px;
-}
-.nav .items {
-  position: relative;
-}
-.nav .items .icon {
-  width: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-.nav .items .icon span {
-  background-color: black;
-  margin-bottom: 8px;
-}
-.nav .items .icon span:first-child {
-  height: 1.8px;
-  width: 100%;
-}
-.nav .items .icon span:nth-child(2) {
-  height: 1.8px;
-  transition: 0.5s;
-  width: 60%;
-}
-.nav .items .icon span:last-child {
-  height: 1.8px;
-  width: 100%;
-}
-.nav .items:hover .icon span:nth-child(2) {
-  width: 100%;
-}
-.nav .items ul {
-  position: absolute;
-  list-style: none;
-  right: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 200px;
-  background-color: #f6f6f6;
-  top: calc(100% + 10px);
-  display: none;
-  z-index: 1;
-}
-.nav .items ul::before {
-  content: "";
-  position: absolute;
-  border-style: solid;
-  border-width: 10px;
-  border-color: transparent transparent #f6f6f6 transparent;
-  top: -18px;
-  right: 5px;
-}
-.nav .items ul::after {
-  content: "";
-  display: list-item;
-}
-.nav .items ul li a {
-  display: block;
-  padding: 10px;
-  -webkit-text-decoration: solid;
-          text-decoration: solid;
-  transition: 0.5s;
-  color: rgb(75, 72, 72);
-  border-bottom: 1px solid #DDD;
-}
-.nav .items ul li a:hover {
-  padding-left: 25px;
-}
-.nav .items:hover ul {
-  display: block;
-}
-
 body {
   font-family: "Work Sans", sans-serif;
   margin: 0;
@@ -124,6 +34,7 @@ body {
 }
 .container-1 .icon i {
   color: #10cab7;
+
 }
 
 .About {
@@ -238,6 +149,7 @@ body {
   }
   .About .About-container .element-1, .About .About-container .element-2 {
     text-align: center;
+
     word-spacing: normal;
   }
 }
@@ -402,6 +314,7 @@ body {
   }
   .home p {
     font-size: 10px;
+
   }
 }
 
