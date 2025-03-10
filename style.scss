@@ -4,15 +4,13 @@ $gray-color: #f6f6f6;
 $bl-color: #10cab7;
 $dark-color: #2c4755;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 body {
     font-family: "Work Sans", sans-serif;
     margin: 0;
     padding: 0;
-
 }
 
 .About {
@@ -192,11 +190,7 @@ body {
         }
     }
 }
-
-    background: $gray-color;
-   
-}
-
+//...
 .header {
 
     background: $wh-color;
@@ -428,6 +422,5 @@ body {
         }
     }
 }
-
 
 
