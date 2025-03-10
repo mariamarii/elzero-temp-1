@@ -1,64 +1,173 @@
-* {
-  font-family: "Work Sans", sans-serif;
+#section2 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 60px;
 }
 
-.heading {
+.container {
+  width: 90%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+}
+.container .icon {
   text-align: center;
-  margin: 0;
+  margin: auto;
 }
-.heading h1 {
-  font-size: 100px;
-  font-weight: 800;
-  color: rgba(136, 133, 133, 0.144);
-  position: relative;
+.container .icon h1 {
+  font-weight: 800px;
+  padding: 20px;
 }
-.heading p {
-  position: relative;
-  top: -120px;
-  font-weight: 100px;
-  font-size: 35px;
+.container .icon p {
+  font-size: 15px;
+  padding: 20px;
   color: rgba(122, 120, 120, 0.815);
 }
-
-.bigger-container {
-  display: flex;
-}
-.bigger-container .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  padding: 20px;
-  width: 60%; /* Adjust width as needed */
-  background-color: white;
-}
-.bigger-container .container .icon i {
+.container .icon i {
   color: #10cab7;
 }
-.bigger-container .container .icon h1 {
-  padding-left: 20px;
+.container body {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f6f6f6;
+}
+.container .header {
+  background: #FFF;
+  padding: 10px 210px;
+  height: 50px;
   display: flex;
-  color: black;
-  font-size: 30;
-  font-weight: 500px;
+  align-items: center;
+  justify-content: space-between;
 }
-.bigger-container .container .icon p {
-  font-size: 15px;
+.container .header .logo {
+  max-width: 70px;
+}
+.container .header details {
+  position: relative;
+  width: auto;
+}
+.container .header details summary {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  list-style: none;
+  border: none;
+  background: transparent;
   padding: 10px;
-  color: rgba(122, 120, 120, 0.815);
+  z-index: 2;
 }
-.bigger-container .image-container {
-  position: relative; /* Needed for absolute positioning of overlay */
+.container .header details summary .line {
+  width: 30px;
+  height: 2px;
+  background: black;
+}
+.container .header details summary .line:nth-child(2) {
+  width: 15px;
+  height: 1.5px;
   margin-left: auto;
-  width: 100%;
-  height: auto;
+  transition: width 0.5s ease-in-out;
 }
-.bigger-container .image-container::before {
+.container .header details .nav {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  display: none;
   position: absolute;
-  top: 0;
+  top: 40px;
   right: 0;
-  width: 30%; /* Adjust overlay width */
-  height: 140%;
+  border-radius: 5px;
+  width: 250px;
+  z-index: 2;
+}
+.container .header details .nav li {
+  height: 30px;
+  padding: 10px;
+  background: #f6f6f6;
+  border-bottom: 1px solid #ddd;
+}
+.container .header details .nav li:last-child {
+  border-bottom: none;
+}
+.container .header details .nav li a {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: 0.7s;
+}
+.container .header details .nav li a:hover {
+  padding-left: 20px;
+}
+.container .header details[open] .nav {
+  display: block;
+}
+.container .header details[open] .line:nth-child(2) {
+  width: 30px;
+}
+.container .header details[open] .line::after {
   content: "";
-  background-color: #464d61; /* Light blue background */
-  z-index: -1; /* Place overlay behind image */
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 10px;
+  bottom: -8px;
+}
+.container .home {
+  background-image: url("./landing.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 86.7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+.container .home .home-content {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  text-align: center;
+}
+.container .home h1 {
+  font-size: 60px;
+  font-family: "Work Sans", sans-serif;
+  color: #10cab7;
+  margin: 0%;
+}
+.container .home p {
+  color: black;
+  font-size: 20px;
+  line-height: 40px;
+}
+@media (max-width: 700px) {
+  .container .home {
+    height: 80vh;
+  }
+  .container .home h1 {
+    font-size: 40px;
+  }
+  .container .home p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 427px) {
+  .container .home {
+    width: 54vh;
+    height: 80vh;
+  }
+  .container .home h1 {
+    font-size: 40px;
+  }
+  .container .home p {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
