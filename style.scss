@@ -1,3 +1,39 @@
+
+$features_color:#10cab7;
+
+#section2{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;;
+}
+.container{
+    width: 90%;
+    background-color: white;
+     display: grid;   
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-gap: 20px;
+   
+    .icon{
+       
+       text-align: center;
+       margin: auto;
+      
+       
+        h1{
+            font-weight: 800px;
+            padding: 20px;
+        }
+        p{
+            font-size: 15px;
+            padding: 20px;
+            color: rgba(122, 120, 120, 0.815);
+        }
+        i{
+           
+            color:$features_color;;
+        }
+    }
+
 $wh-color: #FFF;
 $gray-color: #f6f6f6;
 $bl-color: #10cab7;
@@ -185,6 +221,7 @@ body {
         }
     
     }
+
 
 }
 
