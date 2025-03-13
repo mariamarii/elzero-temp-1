@@ -1,90 +1,302 @@
 $line_Color: #2c4755;
-*{
-    box-sizing: border-box;
-    margin: 0;
-}
-#section1{
-.background{
-    background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_One/images/landing.jpg");
-    background-size: cover;
-    height: calc(100vh - 64px);
-    margin-top:64px;
-    position: relative;
-    .text{
-        text-align: center;
-        vertical-align: middle;
-        font-family: "Work Sans", sans-serif;
-    h1{
+    .container{
+      background-color: rgb(246, 248, 248);
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin: auto;
+     // margin-top: 20px;
+    }
+    @media (min-width:768px) {
+        .container{
+            width:750px;
+        }
         
-        margin: auto;
-        color: rgb(34, 206, 177);
-        position: absolute;
-        bottom: 55%;
-        left: 36%;
-        font-weight: bold;
-        font-size: 60px;
+    }
+    @media (min-width:992px) {
+        .container{
+            width:970px;
+        }
         
-     }
-     p{
-        position: absolute;
-        font-size: 20px;
-        color: black;
-        left: 38%;
-        bottom: 40%;
+    }
+    @media (min-width:1200px) {
+        .container{
+            width:1170px;
+        }
+        
+    }
+.header{
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        
+    }
+        .menu{
+            position: relative;
+             ul{
+            list-style: none;  
+            display: none;  
+            position: absolute;
+            top: calc(100% + 5px);
+            right:0;
+            margin: 0;
+            padding: 0;
+            min-width: 200px;
+            height: 200px;;
+            background-color: rgb(236, 236, 231);
+            z-index: 1;
+           
+            a{
+                text-decoration: none;
+                color: #414546;
+                transition: 0.2s;
+                display: block;
+                padding: 20px;
+                &:hover{
+                    padding-left: 15px;
+                }
+
+            
+            }
+            
+           
+            }
+
+            &:hover{
+                ul{
+                display: block;
+                }
+            }
+            
+
+          .list-menu{
+          width:35px;
+          height: 30px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          cursor: pointer;
+          border-radius: 20%;
+          span{
+            background-color: $line_Color;
+            margin-bottom: 5px;
+            height: 2.2px;
+            justify-content: flex-end;
+            &:first-child{
+             width: 100%;
+            }
+            &:nth-child(2){
+                width: 60%;
+               transition: flex-grow 0.5s ease-in-out;
+               
+            }
+
+            &:nth-child(3){
+                width: 100%;
+                
+            }
+            
+        }
+
+            }
+        &:hover{
+            .list-menu{
+            span:nth-child(2){
+               // width: 100%;
+               flex-grow: 1;
+            }
+            }
+        }
+
+          }
+        
+      
+      .logo{
+       // position: absolute;
+        width: 60px;
+        }
        
-     }
+        
+        
+
     }
-    
+
+    .background{
+        background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_One/images/landing.jpg");
+        background-size: cover;
+        height: calc(100vh - 64px);
+        margin-top:64px;
+        position: relative;
+        z-index: -1;
+        .text{
+            text-align: center;
+            vertical-align: middle;
+            font-family: "Work Sans", sans-serif;
+            left: 50%;
+            top:50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            width: 320px;
+            max-width: 100%;
+        h1{
+            font-weight: bold;
+            font-size: 50px;
+            margin: 0;
+            color: rgb(34, 206, 177);
+         }
+         p{   
+            font-size: 20px;
+            color: black;
+         }
+        }
+        
+    }
+
+    $features_color:#10cab7;
+
+#section2{
+    padding-top: 60px;
+   // padding-bottom: 60px;
+   // padding-left: 60px;;
 }
-.container{
-.menu{
-    position: fixed;
-    top:20px;
-    margin-left:90%;
-    width:35px;
-    height:2.2px;
-    border-radius: 20%;
-    background-color:$line_Color;
-    cursor: pointer;
-    &::before {
-        content: "";  
-        position: absolute;
-        width: 60%;
-        height: 100%;
-        background-color: $line_Color; 
-        top: 7px;
-        right: 0;
-        transition: width 0.5s ease-in-out;
-    }
-    &:hover::before{
-        width: 100%;  
-    }
-    
-    &::after{
-        content: "";  
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: $line_Color; 
-        top: 14px;
-        right: 0;
-    }
-    &::List-menu{
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    }
- 
+.container2{
+     width: 90%;
+    background-color: white;
+     display: grid;   
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-gap: 30px;
+    margin: auto;
+
    
-}
-.logo{
-position: absolute;
-margin-left: 10%;
-width: 60px;
-top:-45px;
-}
+    .icon{
+       
+       text-align: center;
+       margin: auto;
+      
+       
+        h1{
+            font-weight: 600px;
+            //padding: 20px;
+        }
+        p{
+            font-size: 15px;
+         //   padding: 20px;
+            color: rgba(122, 120, 120, 0.815);
+        }
+        i{
+           
+            color:$features_color;;
+        }
+    }
 }
 
+
+$features_color:#10cab7;
+*{
+    font-family: "Work Sans", sans-serif;
 }
 
+#section3 {
+    .heading{
+        text-align: center;
+        
+        margin: 0 auto;
+        h1{
+            font-size: 100px;
+            font-weight: 800;
+            color: rgba(136, 133, 133, 0.144);
+            position: relative;
+        }
+        p{
+            position: relative;
+            top:-120px;
+            font-weight: 100px;
+            font-size: 35px;
+            color: rgba(122, 120, 120, 0.815);
+        }
+}
+
+@media(max-width: 767px){
+    .heading{
+        h1{
+            font-size: 80px;
+            font-weight: 600px;
+        }
+        p{
+          font-size: 25px;
+        }
+
+    }
+    
+}
+    .container-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    grid-gap: 30px;
+  }
+
+         .icon{
+            i{
+                color:#10cab7;
+            }
+            h1{
+               padding-left: 20px;
+               display: flex;
+               color: black;
+               font-size: 30; 
+               font-weight: 500px;    
+            }
+            p{
+                    font-size: 15px;
+                    color: rgba(122, 120, 120, 0.815);
+                    
+
+            }
+            
+        }
+        @media(max-width: 767px){
+            .container-3{
+                .icon{
+                    flex-direction: column;
+                 
+                }
+                .image-container{
+                    display: none;
+                }
+            }
+          }
+    
+        .image-container {
+            position: relative; 
+           // margin-left: auto;
+                width: 100%;
+                height: auto;
+                display: block;
+                z-index: 1;
+                
+                &::before {
+                    position: absolute;
+                    width: 40%;
+                    height: 120%;
+                    content: "";
+                    background-color: #464d61;
+                    right: -10%;
+                    top: -10%;
+                    z-index: -1; 
+                   
+                }
+        }
+    }
+    
+
+
+
+
+
+    
+
+    
+    
